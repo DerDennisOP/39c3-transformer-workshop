@@ -24,19 +24,18 @@
     ];
 
     datasets = {
-      # librispeechStatic = {
-      #   src = {
-      #     url = "https://static.wavelens.io/private/corpusP.zip";
-      #     hash = "sha256-hGqdUD5/OuhCTla338M30ggGOCTGIprjdbdVAAqdK9o=";
-      #   };
+      addition10.prepare = {
+        directoryPath = ./datasets/addition;
+        drop = [
+          "dataset_train.pt"
+          "dataset_test.pt"
+        ];
 
-      #   prepare = {
-      #     drop = [ "." ];
-      #     commands = ''
-      #       unzip corpusP.zip
-      #     '';
-      #   };
-      # };
+        commands = ''
+          jupyter nbconvert --to script generate.ipynb
+          python3 generate.py --max-number 10 --train-test-split 0.5
+        '';
+      };
     };
 
     trainings = {

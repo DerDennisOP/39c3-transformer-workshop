@@ -12,11 +12,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752069038,
-        "narHash": "sha256-PIt0w/R3wGaAIlI1zPU4heLq7sxrWF6MgWzTEIVCplg=",
+        "lastModified": 1766155727,
+        "narHash": "sha256-XGp4HHH6D6ZKiO5RnMzqYJYnZB538EnEflvlTsOKpvo=",
         "owner": "erikarvstedt",
         "repo": "extra-container",
-        "rev": "ae2966fbdedd466c29b9a5d6f11cadad02e1fdd0",
+        "rev": "b450bdb24fca1076973c852d87bcb49b8eb5fd49",
         "type": "github"
       },
       "original": {
@@ -53,11 +53,11 @@
         "nixpkgs-overwrites": "nixpkgs-overwrites"
       },
       "locked": {
-        "lastModified": 1763514612,
-        "narHash": "sha256-LVOb4Fnt23GYzPFUtvNaEkQia7suvBjhr1w4omR8jxE=",
+        "lastModified": 1766964299,
+        "narHash": "sha256-X0N090pOtWCA/rbmHxQB7jkD8/E49ILj0qFrjBd4f+A=",
         "ref": "refs/heads/main",
-        "rev": "9ae50feef1098300b870108edb63589b0ad3f108",
-        "revCount": 95,
+        "rev": "82d288d94e8d03f368730b13ef46b8b55a3b407a",
+        "revCount": 97,
         "type": "git",
         "url": "https://git.wavelens.io/public/nix-ai"
       },
