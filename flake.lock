@@ -1,0 +1,125 @@
+{
+  "nodes": {
+    "extra-container": {
+      "inputs": {
+        "flake-utils": [
+          "nix-ai",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nix-ai",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1752069038,
+        "narHash": "sha256-PIt0w/R3wGaAIlI1zPU4heLq7sxrWF6MgWzTEIVCplg=",
+        "owner": "erikarvstedt",
+        "repo": "extra-container",
+        "rev": "ae2966fbdedd466c29b9a5d6f11cadad02e1fdd0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "erikarvstedt",
+        "repo": "extra-container",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nix-ai": {
+      "inputs": {
+        "extra-container": "extra-container",
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nixpkgs-overwrites": "nixpkgs-overwrites"
+      },
+      "locked": {
+        "lastModified": 1763514612,
+        "narHash": "sha256-LVOb4Fnt23GYzPFUtvNaEkQia7suvBjhr1w4omR8jxE=",
+        "ref": "refs/heads/main",
+        "rev": "9ae50feef1098300b870108edb63589b0ad3f108",
+        "revCount": 95,
+        "type": "git",
+        "url": "https://git.wavelens.io/public/nix-ai"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.wavelens.io/public/nix-ai"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1766651565,
+        "narHash": "sha256-QEhk0eXgyIqTpJ/ehZKg9IKS7EtlWxF3N7DXy42zPfU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3e2499d5539c16d0d173ba53552a4ff8547f4539",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-overwrites": {
+      "locked": {
+        "lastModified": 1762703341,
+        "narHash": "sha256-/DW6OciFwphnq3g5HjCktEngPVnskyWNhUX2LHxDJD0=",
+        "owner": "DerDennisOP",
+        "repo": "nixpkgs",
+        "rev": "4c9c1070abb8eedc949b8c8a516b0303c02707e7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DerDennisOP",
+        "ref": "comp",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nix-ai": "nix-ai",
+        "nixpkgs": "nixpkgs"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
