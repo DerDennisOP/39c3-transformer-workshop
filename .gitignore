@@ -1,5 +1,11 @@
+# Env
 __pycache__/
-*.pyc
+.ipynb_checkpoints/
+*.lock
+
+# Datasets
 results/
 *.pt
-.ipynb_checkpoints/
+
+# Python
+*.pyc
