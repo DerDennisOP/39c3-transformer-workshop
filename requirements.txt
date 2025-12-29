@@ -5,3 +5,4 @@ torch
 torchinfo
 tqdm
 umap-learn
+einops
