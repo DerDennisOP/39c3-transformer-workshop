@@ -15,14 +15,7 @@
       huggingface = true;
     };
 
-    pythonPackages = [
-      "termcolor"
-      "tqdm"
-      "matplotlib"
-      "einops"
-      "zstandard"
-    ];
-
+    pythonPackages = [ "einops" ];
     datasets = {
       addition10.prepare = {
         directoryPath = ./datasets/addition;

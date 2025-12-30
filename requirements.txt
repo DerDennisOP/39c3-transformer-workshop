@@ -1,8 +1,7 @@
+einops
 jupyter
 matplotlib
-termcolor
 torch
 torchinfo
 tqdm
 umap-learn
-einops

@@ -1,20 +1,19 @@
 [project]
 name = "39c3-transformer-workshop"
 version = "0.1.0"
-description = "Transformer workshop project"
+description = "39C3 Transformer Workshop"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
 
 dependencies = [
+    "einops",
     "jupyter",
     "matplotlib",
-    "termcolor",
     "torch",
     "torchinfo",
     "tqdm",
     "umap-learn",
-    "einops",
 ]
 
 [build-system]
