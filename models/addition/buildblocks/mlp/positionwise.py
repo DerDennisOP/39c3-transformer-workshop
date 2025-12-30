@@ -9,11 +9,10 @@ import torch.nn.functional as F
 class PositionwiseFeedForward(nn.Module):
     """Two-layer MLP applied to each position independently."""
 
-    def __init__(self, d_model: int = 512, d_ff: int = 2048, dropout: float = 0.1):
+    def __init__(self, d_model: int = 512, d_ff: int = 2048):
         super().__init__()
         self.fc1 = nn.Linear(d_model, d_ff)
         self.fc2 = nn.Linear(d_ff, d_model)
-        self.dropout = nn.Dropout(dropout)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        return self.fc2(self.dropout(F.relu(self.fc1(x))))
+        return self.fc2(F.relu(self.fc1(x)))

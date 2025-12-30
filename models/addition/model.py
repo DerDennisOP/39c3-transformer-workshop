@@ -14,10 +14,9 @@ class Transformer(nn.Module):
 
         self.embedding = nn.Embedding(vocab_size, d_model)
         self.encoder_layers = nn.ModuleList([
-            TransformerEncoderLayer(d_model=d_model, n_heads=n_heads) for _ in range(layers)
+            TransformerEncoderLayer(d_model=d_model, n_heads=n_heads, d_ff=4*d_model) for _ in range(layers)
         ])
         self.fc_out = nn.Linear(d_model, vocab_size)
-
 
     def generate_square_subsequent_mask(self, sz: int) -> torch.Tensor:
         """Generate a square mask for the sequence. The masked positions are filled with float('-inf')."""
@@ -28,14 +27,12 @@ class Transformer(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         seq_len = x.size(1)
         x = self.embedding(x)
-        x = x.transpose(0, 1)
 
         mask = self.generate_square_subsequent_mask(seq_len).to(x.device)
 
         for layer in self.encoder_layers:
-            x = layer(x, src_mask=mask)
+            x = layer(x, mask=mask)
 
-        x = x.transpose(0, 1)
         out = self.fc_out(x)
         return out
 
